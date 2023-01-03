@@ -1,11 +1,11 @@
-package Easy;
+package com.solved_Easy;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class WordPattern {
+public class WordPattern_290 {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public boolean wordPattern(String pattern, String s) {
@@ -49,7 +49,7 @@ public class WordPattern {
 
 	public static void main(String[] args) {
 
-		WordPattern wp = new WordPattern();
+		WordPattern_290 wp = new WordPattern_290();
 		System.out.println(wp.wordPattern("aaa", "aa aa aa aa"));
 	}
 

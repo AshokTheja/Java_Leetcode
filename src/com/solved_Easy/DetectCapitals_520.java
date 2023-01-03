@@ -1,6 +1,6 @@
-package Easy;
+package com.solved_Easy;
 
-public class DetectCapitals {
+public class DetectCapitals_520 {
 
 	public boolean detectCapitalUse(String word) {
 
@@ -23,7 +23,7 @@ public class DetectCapitals {
 
 	public static void main(String[] args) {
 
-		DetectCapitals dc = new DetectCapitals();
+		DetectCapitals_520 dc = new DetectCapitals_520();
 		System.out.println(dc.detectCapitalUse("FlaG"));
 	}
 

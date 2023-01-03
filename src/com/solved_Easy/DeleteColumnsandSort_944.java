@@ -1,8 +1,8 @@
-package Easy;
+package com.solved_Easy;
 
 import java.util.Arrays;
 
-public class DeleteColumnsandSort {
+public class DeleteColumnsandSort_944 {
 
 	public int minDeletionSize(String[] strs) {
 
@@ -44,7 +44,7 @@ public class DeleteColumnsandSort {
 
 	public static void main(String[] args) {
 
-		DeleteColumnsandSort ds = new DeleteColumnsandSort();
+		DeleteColumnsandSort_944 ds = new DeleteColumnsandSort_944();
 
 		String[] here = { "a", "b" };
 
