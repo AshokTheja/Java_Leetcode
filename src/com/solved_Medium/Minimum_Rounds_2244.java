@@ -3,11 +3,11 @@ package com.solved_Medium;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Minimum_Rounds_2224 {
+public class Minimum_Rounds_2244 {
 
 	public static void main(String[] args) {
 
-		Minimum_Rounds_2224 mr = new Minimum_Rounds_2224();
+		Minimum_Rounds_2244 mr = new Minimum_Rounds_2244();
 
 		int[] now = { 2, 3, 3 };
 		System.out.println(mr.minimumRounds(now));
