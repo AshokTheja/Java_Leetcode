@@ -72,9 +72,9 @@ public class Valid_Triangle_Number_611 {
 
 				for (int i3 = i2 + 1; i3 <= nums.length - 1; i3++) {
 
-					if ((nums[i1] + nums[i2] > nums[i3])
-							&& (nums[i1] + nums[i3] > nums[i2] && (nums[i3] + nums[i2] > nums[i1]))) {
-						count += 1;
+					if (nums[i1] + nums[i2] > nums[i3] && nums[i1] + nums[i3] > nums[i2]
+							&& nums[i3] + nums[i2] > nums[i1]) {
+						count ++;
 					}
 
 				}
