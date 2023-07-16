@@ -1,33 +1,39 @@
 package com.solved_Medium;
 
+import java.util.Arrays;
+
 public class Increasing_Triplet_Subseqence_334 {
 
 	public static boolean increasingTriplet(int[] nums) {
 
 		int smaller = nums[0];
+		int cycle = 0;
 
-		for (int i = 1; i <= nums.length - 1; i++) {
+		for (int i = 1; i <= nums.length - 2; i++) {
 
-			int greater = 0;
-			if (smaller > nums[i]) {
+			System.out.println(i);
+
+			if (nums[i] < smaller) {
 				smaller = nums[i];
 
 				continue;
-			}
 
-			if (smaller == nums[i])
+			} else if (nums[i] == smaller) {
 				continue;
+			} else if (nums[i] > smaller && nums[i] < findGreater(Arrays.copyOfRange(nums, (i + 1), (nums.length)))) {
 
-			for (int j = nums.length - 1; j >= i + 1; j--) {
+				return true;
+			} else if (((findGreater(Arrays.copyOfRange(nums, (i + 1), (nums.length))) - smaller == 1))) {
 
-				if (greater < nums[j])
-					greater = nums[j];
-			}
+				cycle += 1;
 
-			for (int j = i + 1; j <= nums.length - 1; j++) {
-				if (smaller < nums[i] && nums[i] < greater) {
-					return true;
-				}
+				if (cycle > 2)
+					break;
+
+			} else if ((findGreater(Arrays.copyOfRange(nums, (i + 1), (nums.length))) - smaller == 0)) {
+				cycle += 1;
+
+				break;
 			}
 
 		}
@@ -35,9 +41,24 @@ public class Increasing_Triplet_Subseqence_334 {
 		return false;
 	}
 
+	public static int findGreater(int[] now) {
+
+		return Arrays.stream(now).max().getAsInt();
+
+	}
+
 	public static void main(String[] args) {
 
-		int[] here = { 0, 4, 2, 1, 0, -1, -3 };
+		int[] here = { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+				1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
+				2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+				1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
+				2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+				1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
+				2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+				1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
+				2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2,
+				1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2 };
 
 		System.out.println(increasingTriplet(here));
 
