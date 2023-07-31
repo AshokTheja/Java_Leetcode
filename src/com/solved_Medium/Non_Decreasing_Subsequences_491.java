@@ -9,7 +9,7 @@ public class Non_Decreasing_Subsequences_491 {
 
 		Non_Decreasing_Subsequences_491 nds = new Non_Decreasing_Subsequences_491();
 
-		int[] here = { 4,4,3,2,1 };
+		int[] here = { 1,3,5,7 };
 
 		System.out.println(nds.findSubsequences(here));
 
