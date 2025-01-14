@@ -1,4 +1,4 @@
-package com.solved_Medium;
+package com.solved_Bulb_Switcher_319;
 
 public class Bulb_Switcher_319 {
 
@@ -37,13 +37,13 @@ public class Bulb_Switcher_319 {
 				}
 			} else {
 				for (int k = i; k <= n; k++) {
-					if (here[k - 1] == "OFF") {
+					if (here[k - 1].equals("OFF")) {
 						here[k - 1] = "ON";
 						now += 1;
 						k = (k + i) - 1;
 						if (k > n)
 							continue first;
-					} else if (here[k - 1] == "ON") {
+					} else if (here[k - 1].equals("ON")) {
 						here[k - 1] = "OFF";
 						now -= 1;
 						k = (k + i) - 1;

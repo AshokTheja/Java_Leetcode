@@ -1,0 +1,31 @@
+
+# Leetcode link: https://leetcode.com/problems/bulb-switcher/description/
+
+# Approach
+
+Comparison
+
+Your Code	
+Time Complexity:  O(n log⁡n)
+Space Complexity:  O(n)	
+
+
+ChatGPT Version
+Time Complexity:  O(n log⁡n)
+Space Complexity:  O(n)
+
+Key Observations
+
+Time Complexity: Both implementations have the same time complexity, O(nlog⁡n)O(nlogn), since both follow the same pattern of outer and inner loops with harmonic growth.
+Space Complexity: Both use O(n)O(n) space, but:
+        Your code uses a String[] array, which is less memory-efficient compared to the boolean[] in the ChatGPT version.
+        A boolean[] is more lightweight and avoids string operations.
+
+
+Self observation:  Time & Space is same, but the logic in inner loop differs, as its moves the next k value to the exact double indices, Hence saving much time.
+and the code space is drastically decreased by using boolean instead of String to decide Off / On.
+
+
+Missed Observation: any switch will be on if its touched odd number of times.
+
+

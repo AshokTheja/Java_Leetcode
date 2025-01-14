@@ -1,4 +1,4 @@
-package com.solved_Medium;
+package com.solved_Elimination_Game_390;
 
 import java.util.ArrayList;
 import java.util.List;
